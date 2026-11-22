@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install package
+        run: python -m pip install -e .
+      - name: Run unit and dataset tests
+        run: python -m unittest discover -s tests -v
+      - name: Validate sample dataset
+        run: lyrics-asr-validate tests/fixtures/manifest.jsonl
+      - name: Check CLI entry points
+        run: |
+          lyrics-asr-discover --help
+          lyrics-asr-clean --help
+          lyrics-asr-fetch-lrclib --help
+          lyrics-asr-youtube-search --help
+          lyrics-asr-download-audio --help
+          lyrics-asr-select-benchmark --help
+          lyrics-asr-prepare-benchmark --help
+          lyrics-asr-transcribe --help
+          lyrics-asr-evaluate --help
+          lyrics-asr-split --help
+          lyrics-asr-purge-english --help
+          lyrics-asr-ja-corpus --help
+          lyrics-asr-ja-align --help
+          lyrics-asr-ja-segment --help
+          lyrics-asr-ja-benchmark --help
+          lyrics-asr-ja-evaluate --help
+          lyrics-asr-ja-stats --help
+          lyrics-asr-package-colab --help
+      - name: Confirm the tracked corpus is Japanese-only
+        run: lyrics-asr-purge-english --root . | tee /dev/stderr | grep -q "Total JSONL rows removed: 0"

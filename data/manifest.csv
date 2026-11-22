@@ -1,0 +1,73 @@
+youtube_video_id,lrclib_id,artist,title,license,split,utterances,duration_seconds
+Qp3b-RXtz4w,7351545,Ado,うっせぇわ,Standard YouTube License,train,8,194.78
+Yku9pi8oDK0,7333157,Ado,新時代,Standard YouTube License,train,7,161.95
+WLCw46JqbLk,11175590,Aimyon,ざらめ,Standard YouTube License,train,11,257.42
+pfGI91CFtRg,5170613,Aimyon,ハルノヒ,Standard YouTube License,train,12,287.43
+dEDyNfhA0Xs,3014963,Aimyon,マリーゴールド,Standard YouTube License,train,10,243.65
+9qRCARM_LfE,3015025,Aimyon,愛を伝えたいだとか,Standard YouTube License,train,8,191.95
+yOAwvRmVIyo,14568975,Aimyon,裸の心,Standard YouTube License,train,10,226.73
+nacrCj-Swj8,7235177,Mrs. GREEN APPLE,Magic,Standard YouTube License,train,10,254.04
+HlrQ3ZTdN78,38948990,Mrs. GREEN APPLE,Variety,Standard YouTube License,train,11,264.75
+t_H7arA7OvM,31235787,Mrs. GREEN APPLE,慶びの種,Standard YouTube License,train,9,202.77
+GNQyYTdJ4l8,3871576,Mrs. Green Apple,Soranji,Standard YouTube License,train,13,312.62
+_Q-QFSJQ580,3226902,Superfly,My Best Of My Life,Standard YouTube License,train,12,243.91
+gU5oN0KVofU,1071526,Superfly,愛をこめて花束を,Standard YouTube License,train,10,249.68
+7u052cW1e1Y,1051947,Superfly,覚醒,Standard YouTube License,train,9,175.33
+ZRtdQ81jPUQ,8022411,YOASOBI,Idol,Standard YouTube License,train,8,215.13
+by4SYYWlhEs,7058562,YOASOBI,夜に駆ける,Standard YouTube License,train,10,234.19
+dy90tA3TT1c,7907369,YOASOBI,怪物,Standard YouTube License,train,8,196.45
+Y4nEEZwckuU,5557410,YOASOBI,群青,Standard YouTube License,train,10,249.98
+IeyCdm9WwXM,30198989,ずっと真夜中でいいのに。,TAIDADA,Standard YouTube License,train,8,211.73
+ZUwaudw8ht0,3431920,ずっと真夜中でいいのに。,あいつら全員同窓会,Standard YouTube License,train,9,237.29
+Atvsg_zogxo,3431927,ずっと真夜中でいいのに。,お勉強しといてよ,Standard YouTube License,train,11,239.29
+SAdkxVFyAyc,3595876,ずっと真夜中でいいのに。,不法侵入,Standard YouTube License,train,9,237.62
+4QePrv24TBU,3595882,ずっと真夜中でいいのに。,勘冴えて悔しいわ,Standard YouTube License,train,9,210.67
+_L_M8kIynhE,21085075,キタニタツヤ,いらないもの,Standard YouTube License,train,7,188.57
+4R8u7FVPwrM,22558635,キタニタツヤ,ずうっといっしょ!,Standard YouTube License,train,6,141.02
+nAxSTbugJ_U,8989272,キタニタツヤ,次回予告,Standard YouTube License,train,8,188.26
+P8ODCzh51WE,5668082,キタニタツヤ,私が明日死ぬなら,Standard YouTube License,train,9,226.9
+Nm31tVsq-ZQ,5668099,キタニタツヤ,青のすみか,Standard YouTube License,train,8,187.88
+-VKIqrvVOpo,7330892,ヨルシカ,ただ君に晴れ,Standard YouTube License,train,8,189.69
+t7MBzMP4OzY,3566889,ヨルシカ,ヒッチコック,Standard YouTube License,train,9,206.83
+uF7eT3nhyZ0,5376018,ヨルシカ,晴る,Standard YouTube License,train,12,256.93
+9lVPAWLWtWc,7331096,ヨルシカ,花に亡霊,Standard YouTube License,train,9,206.52
+F64yFFnZfkI,7331106,ヨルシカ,言って。,Standard YouTube License,train,8,187.49
+j01KLlxfoN4,2403225,宇多田ヒカル,Passion,Standard YouTube License,train,9,183.9
+Xpy3pGXg5CU,31319869,宇多田ヒカル,誓い,Standard YouTube License,train,10,241.69
+EDJFgBdAy5w,17980888,米津玄師,Azalea,Standard YouTube License,train,7,177.56
+ux3QETpLcPs,30754808,米津玄師,IRIS OUT,Standard YouTube License,train,5,125.71
+M2cckDmNLMI,1491439,米津玄師,KICK BACK,Standard YouTube License,train,8,187.38
+7WZ1Kt3zraY,3122057,米津玄師,Pale Blue,Standard YouTube License,train,11,266.26
+VUsURj_OYdA,5299681,米津玄師,地球儀,Standard YouTube License,train,11,247.43
+hoxUfOTE5II,7967405,藍井エイル,IGNITE,Standard YouTube License,train,10,226.06
+652DpTJ0g30,6864582,藍井エイル,Lament,Standard YouTube License,train,11,255.93
+GZ7g_my5OaY,2926296,藍井エイル,MEMORIA,Standard YouTube License,train,11,240.19
+FLuFszuT8xM,6724324,藍井エイル,鼓動,Standard YouTube License,train,9,221.99
+7EuTPTVpuNI,5833592,ClariS,コネクト,Standard YouTube License,validation,9,209.7
+DVt13wPJqmw,4810519,ClariS,ヒトリゴト,Standard YouTube License,validation,10,223.09
+rSYoIuyks8g,3871589,Fujii Kaze,grace,Standard YouTube License,validation,11,279.58
+NwOvu-j_WjY,3429465,Fujii Kaze,まつり,Standard YouTube License,validation,8,204.77
+63jl1n5mN30,2739687,Fujii Kaze,死ぬのがいいわ,Standard YouTube License,validation,6,147.12
+3mUXwYx1CQs,3092809,Reol,ゆーれいずみー,Standard YouTube License,validation,7,182.61
+TkroHwQYpFE,2695447,Reol,ヒビカセ,Standard YouTube License,validation,9,206.62
+8PiCsyCexRA,4143297,Reol,十中八九,Standard YouTube License,validation,8,182.17
+2b1IexhKPz4,24023279,いよわ,きゅうくらりん,Standard YouTube License,validation,8,183.27
+sz-yVfChwNU,2406256,れをる,アシンメトリー,Standard YouTube License,validation,10,212.75
+b56xjtP6Qac,30430688,稲葉曇,リレイアウター (Relayouter),Standard YouTube License,validation,8,192.25
+DeKLpgzh-qQ,31916154,稲葉曇,ロストアンブレラ,Standard YouTube License,validation,7,174.02
+EEk4JGzqoFg,18370205,稲葉曇,私は雨,Standard YouTube License,validation,9,208.14
+XeI8E20ZUE4,7274081,Aimer,Brave Shine,Standard YouTube License,test,8,194.08
+ptwH69_0EAo,7231408,Aimer,RE:I AM,Standard YouTube License,test,13,306.57
+D16AGQQ0tdM,7826774,Aimer,StarRingChild,Standard YouTube License,test,12,255.63
+kxs9Su_mbpU,8138770,Aimer,カタオモイ,Standard YouTube License,test,8,189.88
+zz2a9Q2Wru0,30253574,King Gnu,AIZO,Standard YouTube License,test,8,206.0
+fhzKLBZJC3w,8426482,King Gnu,SPECIALZ,Standard YouTube License,test,10,236.31
+gc0_Acq8dV4,5815949,King Gnu,どろん,Standard YouTube License,test,7,172.95
+Tll_g1Gx7I8,2738272,King Gnu,白日,Standard YouTube License,test,10,249.36
+ea-WMqlmZ1E,17980804,Official髭男dism,50%,Standard YouTube License,test,11,281.01
+O1bhZgkC4Gw,2521639,Official髭男dism,Cry Baby,Standard YouTube License,test,9,207.8
+Wf8XuAoCjN8,4744403,Official髭男dism,ミックスナッツ,Standard YouTube License,test,8,194.12
+-kgOFJG881I,6658846,Official髭男dism,宿命,Standard YouTube License,test,11,225.64
+Gbz2C2gQREI,4970187,Vaundy,不可幸力,Standard YouTube License,test,7,183.71
+FT0GKCuSaW0,5206919,Vaundy,裸の勇者,Standard YouTube License,test,9,201.67
+7HgJIAUtICU,5206921,Vaundy,踊り子,Standard YouTube License,test,9,218.95

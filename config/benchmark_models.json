@@ -1,0 +1,151 @@
+{
+  "task": "Japanese sung-lyrics transcription",
+  "decode_settings": {
+    "language": "ja",
+    "task": "transcribe",
+    "beam_size": 5,
+    "vad_filter": false,
+    "condition_on_previous_text": false,
+    "note": "language is pinned to ja for every system; no system is allowed to language-detect, and no .en checkpoint is eligible"
+  },
+  "metrics": {
+    "primary": ["cer", "character_f1"],
+    "wer_reported": false,
+    "justification": "Japanese is written without spaces between words, so word-level tokenization is not well defined and WER would measure the segmenter as much as the model. The Hugging Face Audio Course, Chapter 5 ('Evaluation metrics for ASR'), states this directly.",
+    "quote": "Certain languages, such as Mandarin and Japanese, have no notion of 'words', and so the WER is meaningless. Here, we revert to using the CER.",
+    "reference": "https://huggingface.co/learn/audio-course/chapter5/evaluation",
+    "character_f1_rationale": "Reported alongside CER because CER is an unbounded error rate that merges insertions, deletions and substitutions into one number. Character F1 is bounded in [0,1] and charges hallucinated text to precision rather than inflating a single rate, so the two together separate 'missed the lyric' from 'invented extra text'."
+  },
+  "systems": [
+    {
+      "name": "faster-whisper-base",
+      "repo_id": "Systran/faster-whisper-base",
+      "model_card": "https://huggingface.co/Systran/faster-whisper-base",
+      "revision": "ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66",
+      "tier": "baseline",
+      "family": "attention encoder-decoder (multilingual Whisper)",
+      "parameters": "74M",
+      "device": "cpu",
+      "compute_type": "int8",
+      "beam_size": 5,
+      "note": "also used by lyrics_asr.ja_align to estimate the per-song scalar time offset"
+    },
+    {
+      "name": "faster-whisper-small",
+      "repo_id": "Systran/faster-whisper-small",
+      "model_card": "https://huggingface.co/Systran/faster-whisper-small",
+      "revision": "536b0662742c02347bc0e980a01041f333bce120",
+      "tier": "baseline",
+      "family": "attention encoder-decoder (multilingual Whisper)",
+      "parameters": "244M",
+      "device": "cpu",
+      "compute_type": "int8",
+      "beam_size": 5
+    },
+    {
+      "name": "faster-whisper-medium",
+      "repo_id": "Systran/faster-whisper-medium",
+      "model_card": "https://huggingface.co/Systran/faster-whisper-medium",
+      "revision": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+      "tier": "baseline",
+      "family": "attention encoder-decoder (multilingual Whisper)",
+      "parameters": "769M",
+      "device": "cpu",
+      "compute_type": "int8",
+      "beam_size": 5
+    },
+    {
+      "name": "faster-whisper-large-v3-turbo",
+      "repo_id": "deepdml/faster-whisper-large-v3-turbo-ct2",
+      "model_card": "https://huggingface.co/deepdml/faster-whisper-large-v3-turbo-ct2",
+      "revision": "4df90f75321148c3a29a9e2351b7ddf8f5b115a8",
+      "tier": "baseline",
+      "family": "attention encoder-decoder (multilingual Whisper large-v3-turbo, CTranslate2 conversion)",
+      "parameters": "809M",
+      "device": "cpu",
+      "compute_type": "int8",
+      "beam_size": 5,
+      "note": "CTranslate2 conversion of openai/whisper-large-v3-turbo (https://huggingface.co/openai/whisper-large-v3-turbo)"
+    },
+    {
+      "name": "kotoba-whisper-v2.0",
+      "repo_id": "kotoba-tech/kotoba-whisper-v2.0-faster",
+      "model_card": "https://huggingface.co/kotoba-tech/kotoba-whisper-v2.0-faster",
+      "revision": "f44edd35eaeb2274e85ac7b31fb2c6f59ff1c4bc",
+      "tier": "japanese-pretrained",
+      "family": "distilled Whisper encoder-decoder trained for Japanese only",
+      "parameters": "756M",
+      "backend": "ct2",
+      "device": "cpu",
+      "compute_type": "int8",
+      "beam_size": 5,
+      "note": "Japanese-specialised already-trained checkpoint; distilled from whisper-large-v3 on the ReazonSpeech Japanese corpus. Teacher card: https://huggingface.co/kotoba-tech/kotoba-whisper-v2.0"
+    },
+    {
+      "name": "anime-whisper",
+      "repo_id": "litagin/anime-whisper",
+      "model_card": "https://huggingface.co/litagin/anime-whisper",
+      "revision": "22e2008a8182b357da3922a6308d095008f72973",
+      "tier": "japanese-pretrained",
+      "family": "distilled Whisper encoder-decoder trained for Japanese only",
+      "parameters": "756M",
+      "backend": "transformers",
+      "device": "cuda",
+      "compute_type": "float16",
+      "beam_size": 5,
+      "note": "Japanese-specialised already-trained checkpoint; kotoba-whisper-v2.0 fine-tuned further on ~5,300 h of expressive Japanese speech. Ships only in transformers format, so it runs in the Colab/GPU path (colab_handoff/run_colab.py), not the CTranslate2-only local runner. The model card warns against initial prompts, so none is used."
+    },
+    {
+      "name": "whisper-small-lora-ja",
+      "repo_id": "openai/whisper-small",
+      "model_card": "https://huggingface.co/openai/whisper-small",
+      "revision": "lora-r32-seed42-epoch2",
+      "tier": "contribution",
+      "family": "multilingual Whisper + LoRA adapter fine-tuned on this corpus",
+      "parameters": "244M base + ~7M LoRA adapter",
+      "backend": "transformers+peft",
+      "device": "cuda",
+      "compute_type": "float16",
+      "beam_size": 5,
+      "training": {
+        "split": "train",
+        "language": "ja",
+        "task": "transcribe",
+        "lora_rank": 32,
+        "lora_alpha": 64,
+        "lora_dropout": 0.05,
+        "target_modules": ["q_proj", "v_proj"],
+        "epochs": 4,
+        "learning_rate": 0.00005,
+        "batch_size": 8,
+        "seed": 42,
+        "selection": "lowest validation CER, evaluated after every epoch",
+        "selected_epoch": 2,
+        "test_decodes": 1
+      },
+      "note": "The project's own modelling contribution. Not expected to top the table: 2.7 h over 11 singers cannot out-train a model distilled on thousands of hours of Japanese. The informative comparison is against faster-whisper-small, which shares its base checkpoint and size. Runs in colab_handoff/run_colab.py --stage finetune."
+    }
+  ],
+  "excluded_systems": [
+    {
+      "repo_id": "nvidia/canary-1b-v2",
+      "model_card": "https://huggingface.co/nvidia/canary-1b-v2",
+      "revision": "d455706339a6b32e1aa40f82c713a482a0c938e2",
+      "family": "FastConformer encoder + Transformer decoder (hybrid ASR/AST)",
+      "exclusion_reason": "The model card declares exactly 25 European languages (bg, hr, cs, da, nl, en, et, fi, fr, de, el, hu, it, lv, lt, mt, pl, pt, ro, sk, sl, es, sv, ru, uk) and never mentions Japanese. Scoring it on this Japanese-only corpus would require decoding under a language it does not support, which the project's rules forbid.",
+      "declared_languages": 25,
+      "japanese_in_card": false,
+      "status": "excluded_no_japanese_support"
+    },
+    {
+      "repo_id": "nvidia/parakeet-tdt-0.6b-v3",
+      "model_card": "https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3",
+      "revision": "541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+      "family": "FastConformer RNN-T/TDT",
+      "exclusion_reason": "The model card declares exactly 25 European languages (en, es, fr, de, bg, hr, cs, da, nl, et, fi, el, hu, it, lv, lt, mt, pl, pt, ro, sk, sl, sv, ru, uk) and never mentions Japanese. It therefore cannot be scored on this Japanese-only corpus without decoding under an unsupported language.",
+      "declared_languages": 25,
+      "japanese_in_card": false,
+      "status": "excluded_no_japanese_support"
+    }
+  ]
+}

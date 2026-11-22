@@ -1,0 +1,49 @@
+{
+  "base_model": "openai/whisper-small",
+  "system": "whisper-small-lora-ja",
+  "epochs": 4,
+  "lora_rank": 32,
+  "lora_alpha": 64,
+  "target_modules": [
+    "q_proj",
+    "v_proj"
+  ],
+  "learning_rate": 5e-05,
+  "batch_size": 8,
+  "seed": 42,
+  "language": "ja",
+  "task": "transcribe",
+  "train_utterances": 408,
+  "validation_utterances": 110,
+  "test_utterances": 140,
+  "training_minutes": 10.07,
+  "selected_epoch": 2,
+  "selection_metric": "validation CER",
+  "validation_cer_at_selected_epoch": 0.4850655493985674,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 3.3365,
+      "validation_cer": 0.49303959994593866,
+      "validation_character_f1": 0.5825297787861601
+    },
+    {
+      "epoch": 2,
+      "train_loss": 2.1117,
+      "validation_cer": 0.4850655493985674,
+      "validation_character_f1": 0.5903716216216216
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.8361,
+      "validation_cer": 0.48574131639410734,
+      "validation_character_f1": 0.586786744529656
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.7385,
+      "validation_cer": 0.49628328152453033,
+      "validation_character_f1": 0.5795008412787437
+    }
+  ]
+}

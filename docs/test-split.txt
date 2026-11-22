@@ -1,0 +1,85 @@
+JAPANESE-ONLY SPLIT POLICY
+==========================
+
+Scope
+-----
+A course constraint forbids English songs, so this corpus is Japanese-only.
+English rows were removed from every tracked and local file by
+`lyrics-asr-purge-english`; they are absent, not filtered at read time.
+
+Split unit and grouping
+-----------------------
+Group by actual vocalist / voice source, never by clip. All clips from one
+singer and all clips cut from one recording stay in a single split.
+Collaborations connect performers and recordings into one indivisible group,
+which can make the realized percentages differ from the target.
+
+Why: test performance should estimate transcription of previously unseen
+singers and recordings. A clip-level split can put the same singer, track,
+microphone/room condition, or repeated chorus in both train and test and
+inflate scores. Validation is for checkpoint and setting choices. Freeze all
+choices before using test once. Every baseline and trained system must use
+identical test utterance IDs and identical LRCLIB references.
+
+Current Japanese corpus
+-----------------------
+`data/cleaned/ja_corpus.jsonl` holds 72 songs over 20 speaker groups, split
+62/20/18 by song count at seed 42:
+
+  train        44 songs   11 speaker groups
+  validation   13 songs    5 speaker groups
+  test         15 songs    4 speaker groups
+
+Speaker groups and recording groups are disjoint across all three splits.
+
+Four speaker groups are pinned into test: `aimer`, `king-gnu`,
+`satoshi-fujihara`, `vaundy`. These are the speakers of the 9 Japanese songs
+whose zero-shot baseline predictions were already computed and cached, so
+pinning them preserves that frozen result instead of discarding it. Seed 42
+assigns every remaining speaker group to train or validation;
+`lyrics-asr-split --pin-test-speakers` implements the same rule generically and
+raises an error if a pinned speaker is absent rather than ignoring it.
+
+Corpus selection happens before splitting, and is a rule rather than a
+hand-pick. A song enters the pool only if its LRCLIB reference is in Japanese
+script (ratio >= 0.60, which removes rows where LRCLIB stored romanized or
+translated lyrics), has at least 8 timestamped lines, has a plausible
+synced-lyric coverage of the track, and has a non-cover, non-live source video
+within 45 s of the LRCLIB duration. Songs per speaker are capped (5 generally,
+4 for the pinned test speakers) so no single vocalist dominates and so test
+lands inside the requested 15-18 song budget. All 36 exclusions are recorded
+with reasons in `data/cleaned/ja_corpus_excluded.jsonl`.
+
+Speaker group assignments are curated and provisional. Producer credits and
+mixed vocal tracks need special handling, and Vocaloid recordings use
+voicebanks rather than human singers: the requested Inabakumori tracks are
+grouped under `kaai-yuki` and `kafu` by voicebank. Review these assignments
+against each recording before presenting the corpus as definitive speaker
+generalization.
+
+Evaluation unit
+---------------
+Scoring happens on utterances, not whole songs. Each utterance is a window of
+at most ~28 s cut at LRCLIB syncedLyrics line boundaries and shifted by a
+per-song scalar offset, so the audio under an utterance is the audio its
+reference describes. Audio that no lyric line covers (intros, solos, outros) is
+never cut, so the corpus reports both source duration and the smaller used
+duration.
+
+Audit and commands
+------------------
+Report speakers, utterances, source and used hours, and exact train/test
+sentence overlap per split; verify speaker/recording disjointness.
+
+```powershell
+lyrics-asr-ja-corpus
+lyrics-asr-ja-align
+lyrics-asr-ja-segment
+lyrics-asr-ja-stats
+lyrics-asr-validate data/private/ja_utterances.jsonl --require-split
+```
+
+Limitations to report rather than hide: 20 speaker groups is a small number of
+held-out voices; dialect is `unassessed` for every row, so no dialect-stratified
+claim is made; and LRCLIB references may omit performed ad-libs or describe a
+different release of the same song.

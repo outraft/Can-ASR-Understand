@@ -1,0 +1,30 @@
+{
+  "pages_per_query": 3,
+  "requests_per_second": 1.0,
+  "queries": [
+    {"query": "ZUTOMAYO", "language": "ja", "artist_hint": "ZUTOMAYO", "artist_aliases": ["ZUTOMAYO", "ずっと真夜中でいいのに。"]},
+    {"query": "milet", "language": "ja", "artist_hint": "milet", "artist_aliases": ["milet"]},
+    {"query": "NiziU", "language": "ja", "artist_hint": "NiziU", "artist_aliases": ["NiziU"]},
+    {"query": "キタニタツヤ", "language": "ja", "artist_hint": "Tatsuya Kitani", "artist_aliases": ["キタニタツヤ", "Tatsuya Kitani"]},
+    {"query": "藍井エイル", "language": "ja", "artist_hint": "Eir Aoi", "artist_aliases": ["藍井エイル", "Eir Aoi"]},
+    {"query": "ReoNa", "language": "ja", "artist_hint": "ReoNa", "artist_aliases": ["ReoNa"]},
+    {"query": "EGOIST", "language": "ja", "artist_hint": "EGOIST", "artist_aliases": ["EGOIST"]},
+    {"query": "ClariS", "language": "ja", "artist_hint": "ClariS", "artist_aliases": ["ClariS"]},
+    {"query": "RADWIMPS", "language": "ja", "artist_hint": "RADWIMPS", "artist_aliases": ["RADWIMPS"]},
+    {"query": "BUMP OF CHICKEN", "language": "ja", "artist_hint": "BUMP OF CHICKEN", "artist_aliases": ["BUMP OF CHICKEN"]},
+    {"query": "ONE OK ROCK", "language": "ja", "artist_hint": "ONE OK ROCK", "artist_aliases": ["ONE OK ROCK"]},
+    {"query": "サカナクション", "language": "ja", "artist_hint": "Sakanaction", "artist_aliases": ["サカナクション", "Sakanaction"]},
+    {"query": "羊文学", "language": "ja", "artist_hint": "Hitsujibungaku", "artist_aliases": ["羊文学", "Hitsujibungaku"]},
+    {"query": "KANA-BOON", "language": "ja", "artist_hint": "KANA-BOON", "artist_aliases": ["KANA-BOON"]},
+    {"query": "マカロニえんぴつ", "language": "ja", "artist_hint": "Macaroni Enpitsu", "artist_aliases": ["マカロニえんぴつ", "Macaroni Enpitsu"]},
+    {"query": "Ado New Genesis", "language": "ja", "artist_hint": "Ado", "artist_aliases": ["Ado"]},
+    {"query": "Eve Dramaturgy", "language": "ja", "artist_hint": "Eve", "artist_aliases": ["Eve", "イブ"]},
+    {"query": "DECO*27", "language": "ja", "artist_hint": "DECO*27", "artist_aliases": ["DECO*27"]},
+    {"query": "Kanaria", "language": "ja", "artist_hint": "Kanaria", "artist_aliases": ["Kanaria"]},
+    {"query": "ピノキオピー", "language": "ja", "artist_hint": "PinocchioP", "artist_aliases": ["ピノキオピー", "PinocchioP"]},
+    {"query": "Neru", "language": "ja", "artist_hint": "Neru", "artist_aliases": ["Neru"]},
+    {"query": "Orangestar", "language": "ja", "artist_hint": "Orangestar", "artist_aliases": ["Orangestar"]},
+    {"query": "かいりきベア", "language": "ja", "artist_hint": "Kairiki Bear", "artist_aliases": ["かいりきベア", "Kairiki Bear"]},
+    {"query": "米津玄師 Flamingo", "language": "ja", "artist_hint": "Kenshi Yonezu", "artist_aliases": ["米津玄師", "Kenshi Yonezu"]}
+  ]
+}

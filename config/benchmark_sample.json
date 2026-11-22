@@ -1,0 +1,208 @@
+{
+  "seed": 2026,
+  "groups": [
+    {
+      "artist_hint": "Kenshi Yonezu",
+      "speaker_group": "kenshi-yonezu",
+      "language": "ja",
+      "split": "train",
+      "count": 3,
+      "genius_ids": [
+        6704753,
+        8396235,
+        9325158
+      ],
+      "aliases": [
+        "米津玄師",
+        "Kenshi Yonezu"
+      ]
+    },
+    {
+      "artist_hint": "YOASOBI",
+      "speaker_group": "ikura-yoasobi",
+      "language": "ja",
+      "split": "train",
+      "count": 3,
+      "genius_ids": [
+        5638888,
+        5918644,
+        9093060
+      ],
+      "aliases": [
+        "YOASOBI"
+      ]
+    },
+    {
+      "artist_hint": "Fujii Kaze",
+      "speaker_group": "fujii-kaze",
+      "language": "ja",
+      "split": "train",
+      "count": 3,
+      "genius_ids": [
+        7720644,
+        8424180,
+        9296814
+      ],
+      "aliases": [
+        "Fujii Kaze"
+      ]
+    },
+    {
+      "artist_hint": "Reol",
+      "speaker_group": "reol",
+      "language": "ja",
+      "split": "train",
+      "count": 3,
+      "genius_ids": [
+        2477523,
+        2477575,
+        2477577
+      ],
+      "aliases": [
+        "Reol",
+        "れをる"
+      ]
+    },
+    {
+      "artist_hint": "Aimyon",
+      "speaker_group": "aimyon",
+      "language": "ja",
+      "split": "validation",
+      "count": 3,
+      "genius_ids": [
+        5522423,
+        5803271,
+        5803288
+      ],
+      "aliases": [
+        "Aimyon",
+        "あいみょん"
+      ]
+    },
+    {
+      "artist_hint": "Hikaru Utada",
+      "speaker_group": "hikaru-utada",
+      "language": "ja",
+      "split": "validation",
+      "count": 3,
+      "genius_ids": [
+        1132442,
+        2830605,
+        6261390
+      ],
+      "aliases": [
+        "Hikaru Utada",
+        "宇多田ヒカル"
+      ]
+    },
+    {
+      "artist_hint": "Yorushika",
+      "speaker_group": "suis-yorushika",
+      "language": "ja",
+      "split": "validation",
+      "count": 3,
+      "genius_ids": [
+        3683963,
+        4422794,
+        8136797
+      ],
+      "aliases": [
+        "Yorushika",
+        "ヨルシカ"
+      ]
+    },
+    {
+      "artist_hint": "Superfly",
+      "speaker_group": "superfly",
+      "language": "ja",
+      "split": "validation",
+      "count": 2,
+      "genius_ids": [
+        1550056,
+        5002296
+      ],
+      "aliases": [
+        "Superfly"
+      ]
+    },
+    {
+      "artist_hint": "Aimer",
+      "speaker_group": "aimer",
+      "language": "ja",
+      "split": "test",
+      "count": 3,
+      "genius_ids": [
+        2930936,
+        3002994,
+        3003007
+      ],
+      "aliases": [
+        "Aimer"
+      ]
+    },
+    {
+      "artist_hint": "Vaundy",
+      "speaker_group": "vaundy",
+      "language": "ja",
+      "split": "test",
+      "count": 2,
+      "genius_ids": [
+        7396632,
+        7525914
+      ],
+      "aliases": [
+        "Vaundy",
+        "バウンディ"
+      ]
+    },
+    {
+      "artist_hint": "Official HIGE DANdism",
+      "speaker_group": "satoshi-fujihara",
+      "language": "ja",
+      "split": "test",
+      "count": 2,
+      "genius_ids": [
+        4873539,
+        6582902
+      ],
+      "aliases": [
+        "Official HIGE DANdism",
+        "Official髭男dism"
+      ]
+    },
+    {
+      "artist_hint": "King Gnu",
+      "speaker_group": "king-gnu",
+      "language": "ja",
+      "split": "test",
+      "count": 2,
+      "genius_ids": [
+        5114680,
+        12856071
+      ],
+      "aliases": [
+        "King Gnu"
+      ]
+    }
+  ],
+  "fixed": [
+    {
+      "genius_id": 9394125,
+      "speaker_group": "kaai-yuki",
+      "language": "ja",
+      "split": "train"
+    },
+    {
+      "genius_id": 10300047,
+      "speaker_group": "kaai-yuki",
+      "language": "ja",
+      "split": "train"
+    },
+    {
+      "genius_id": 7707988,
+      "speaker_group": "kafu",
+      "language": "ja",
+      "split": "train"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lyrics-asr-study"
+version = "0.1.0"
+description = "Reproducible sung-lyrics ASR dataset and evaluation utilities"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+media = ["yt-dlp>=2025.1.26"]
+asr = ["faster-whisper>=1.1,<2.0", "av<19"]
+
+[project.scripts]
+lyrics-asr-discover = "lyrics_asr.discover:main"
+lyrics-asr-clean = "lyrics_asr.clean_candidates:main"
+lyrics-asr-fetch-lrclib = "lyrics_asr.fetch_lrclib:main"
+lyrics-asr-youtube-search = "lyrics_asr.youtube_search:main"
+lyrics-asr-download-audio = "lyrics_asr.download_audio:main"
+lyrics-asr-transcribe = "lyrics_asr.transcribe:main"
+lyrics-asr-select-benchmark = "lyrics_asr.select_benchmark:main"
+lyrics-asr-prepare-benchmark = "lyrics_asr.prepare_benchmark:main"
+lyrics-asr-evaluate = "lyrics_asr.evaluate:main"
+lyrics-asr-split = "lyrics_asr.split:main"
+lyrics-asr-validate = "lyrics_asr.validate:main"
+lyrics-asr-purge-english = "lyrics_asr.purge_english:main"
+lyrics-asr-ja-corpus = "lyrics_asr.ja_corpus:main"
+lyrics-asr-ja-align = "lyrics_asr.ja_align:main"
+lyrics-asr-ja-segment = "lyrics_asr.ja_segment:main"
+lyrics-asr-ja-benchmark = "lyrics_asr.ja_benchmark:main"
+lyrics-asr-ja-evaluate = "lyrics_asr.ja_evaluate:main"
+lyrics-asr-ja-stats = "lyrics_asr.ja_stats:main"
+lyrics-asr-package-colab = "lyrics_asr.package_colab:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

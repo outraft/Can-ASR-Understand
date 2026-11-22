@@ -1,0 +1,7 @@
+{
+  "pages_per_query": 1,
+  "requests_per_second": 1.0,
+  "queries": [
+    {"query": "私は雨 稲葉曇", "language": "ja", "artist_hint": "Inabakumori", "artist_aliases": ["Inabakumori", "稲葉曇"]}
+  ]
+}

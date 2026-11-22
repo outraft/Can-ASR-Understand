@@ -1,0 +1,31 @@
+{
+  "seed": 2026,
+  "groups": [
+    {"artist_hint":"Kenshi Yonezu","speaker_group":"kenshi-yonezu","language":"ja","split":"train","count":5,"aliases":["米津玄師","Kenshi Yonezu"]},
+    {"artist_hint":"YOASOBI","speaker_group":"ikura-yoasobi","language":"ja","split":"train","count":5,"aliases":["YOASOBI"]},
+    {"artist_hint":"Fujii Kaze","speaker_group":"fujii-kaze","language":"ja","split":"train","count":5,"aliases":["Fujii Kaze"]},
+    {"artist_hint":"Reol","speaker_group":"reol","language":"ja","split":"train","count":5,"aliases":["Reol","れをる"]},
+    {"artist_hint":"Tatsuya Kitani","speaker_group":"tatsuya-kitani","language":"ja","split":"train","count":5,"aliases":["Tatsuya Kitani","キタニタツヤ"]},
+    {"artist_hint":"milet","speaker_group":"milet","language":"ja","split":"train","count":5,"aliases":["milet"]},
+    {"artist_hint":"NiziU","speaker_group":"niziu","language":"ja","split":"train","count":4,"aliases":["NiziU"]},
+    {"artist_hint":"ClariS","speaker_group":"claris","language":"ja","split":"train","count":2,"aliases":["ClariS"]},
+    {"artist_hint":"Aimyon","speaker_group":"aimyon","language":"ja","split":"validation","count":7,"aliases":["Aimyon","あいみょん"]},
+    {"artist_hint":"Hikaru Utada","speaker_group":"hikaru-utada","language":"ja","split":"validation","count":6,"aliases":["Hikaru Utada","宇多田ヒカル"]},
+    {"artist_hint":"Yorushika","speaker_group":"suis-yorushika","language":"ja","split":"validation","count":6,"aliases":["Yorushika","ヨルシカ"]},
+    {"artist_hint":"Superfly","speaker_group":"superfly","language":"ja","split":"validation","count":3,"aliases":["Superfly"]},
+    {"artist_hint":"ZUTOMAYO","speaker_group":"zutomayo","language":"ja","split":"validation","count":6,"aliases":["ZUTOMAYO","ずっと真夜中でいいのに。"]},
+    {"artist_hint":"Ado","speaker_group":"ado","language":"ja","split":"validation","count":2,"aliases":["Ado"]},
+    {"artist_hint":"Aimer","speaker_group":"aimer","language":"ja","split":"test","count":5,"aliases":["Aimer"]},
+    {"artist_hint":"Vaundy","speaker_group":"vaundy","language":"ja","split":"test","count":5,"aliases":["Vaundy","バウンディ"]},
+    {"artist_hint":"Official HIGE DANdism","speaker_group":"satoshi-fujihara","language":"ja","split":"test","count":5,"aliases":["Official HIGE DANdism","Official髭男dism"]},
+    {"artist_hint":"King Gnu","speaker_group":"king-gnu","language":"ja","split":"test","count":5,"aliases":["King Gnu"]},
+    {"artist_hint":"Mrs. GREEN APPLE","speaker_group":"motoki-omori","language":"ja","split":"test","count":5,"aliases":["Mrs. GREEN APPLE"]},
+    {"artist_hint":"Eir Aoi","speaker_group":"eir-aoi","language":"ja","split":"test","count":5,"aliases":["Eir Aoi","藍井エイル"]}
+  ],
+  "fixed": [
+    {"genius_id":9394125,"speaker_group":"kaai-yuki","language":"ja","split":"train"},
+    {"genius_id":10300047,"speaker_group":"kaai-yuki","language":"ja","split":"train"},
+    {"genius_id":6203253,"speaker_group":"kaai-yuki","language":"ja","split":"train"},
+    {"genius_id":7707988,"speaker_group":"kafu","language":"ja","split":"train"}
+  ]
+}
